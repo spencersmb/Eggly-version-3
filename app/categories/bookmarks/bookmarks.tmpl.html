@@ -1,0 +1,31 @@
+
+<div ng-class="{'active' : isSelectedBookmark(bookmark.id)}"
+     ng-repeat="bookmark in bookmarksListCtrl.bookmarks | filter:{category:bookmarksListCtrl.getCurrentCategoryName()}">
+  <button ng-click="deleteBookmark(bookmark)" type="button" class="close">&times;</button>
+  <button ui-sref="eggly.categories.bookmarks.edit({bookmarkId:bookmark.id})"
+          class="btn btn-link">
+    <span class="glyphicon glyphicon-pencil"></span>
+  </button>
+  <a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
+</div>
+
+<hr/>
+
+<!-- CREATING -->
+<ui-view ng-show="bookmarksListCtrl.getCurrentCategory()">
+  <!--On submit we are executing a function that takes in a newBookmark object
+  We use 2 way data biding to update newBookmark.title and newBookmark.url-->
+  <button type="button" class="btn btn-link" ui-sref="eggly.categories.bookmarks.create">
+    <span class="glyphicon glyphicon-plus"></span>
+    Create Bookmark
+  </button>
+
+
+</ui-view>
+<!-- EDITING -->
+<!--<div ng-show="shouldShowEditing()">-->
+  <!--<h4>Editing {{editedBookmark.title}}</h4>-->
+
+
+
+<!--</div>-->

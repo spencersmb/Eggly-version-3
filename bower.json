@@ -1,0 +1,24 @@
+{
+  "name": "Eggly version 3",
+  "version": "0.0.0",
+  "authors": [
+    "spencersmb <spencer.bigum@gmail.com>"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.14",
+    "bootstrap": "~3.3.2",
+    "underscore": "~1.8.2"
+  }
+}
